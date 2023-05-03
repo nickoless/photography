@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Layout from "@/components/Layout";
+
 import { Section } from "@/styles/common";
 
 export default function Home() {
@@ -8,13 +9,8 @@ export default function Home() {
         <Layout>
             <Section>
                 <HeadingWrapper>
-                    <Heading>Nick</Heading>
-                    <Heading>Lee</Heading>
+                    <Heading>Aboot</Heading>
                 </HeadingWrapper>
-                <Heading></Heading>
-                <SubHeading>
-                    Hobbyist photographer. A collection of my favourite shots.
-                </SubHeading>
             </Section>
         </Layout>
     );
@@ -37,7 +33,5 @@ const SubHeading = styled.h2`
 
 const HeadingWrapper = styled.div`
     display: flex;
-    flex-direction: column;
     align-self: center;
-    margin-bottom: 10rem;
 `;
