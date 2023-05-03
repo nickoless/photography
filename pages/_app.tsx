@@ -1,8 +1,9 @@
+import { AppProps } from "next/app";
 import localFont from "next/font/local";
 import { ThemeProvider } from "styled-components";
-import { AppProps } from "next/app";
 
 import { GlobalStyle, theme } from "@/styles/globalStyle";
+import { getToken } from "./utils";
 
 const myFont = localFont({
     src: [
@@ -24,6 +25,8 @@ const myFont = localFont({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+    getToken();
+
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
