@@ -1,25 +1,25 @@
-import { AppProps } from "next/app";
-import localFont from "next/font/local";
-import { ThemeProvider } from "styled-components";
+import { AppProps } from 'next/app';
+import localFont from 'next/font/local';
+import { ThemeProvider } from 'styled-components';
 
-import { GlobalStyle, theme } from "@/styles/globalStyle";
-import { getToken } from "./utils";
+import { GlobalStyle, theme } from '@/styles/globalStyle';
+import getToken from '@/utils/getToken';
 
 const myFont = localFont({
     src: [
         {
-            path: "../public/fonts/NeueMontreal-Book.otf",
-            weight: "400",
-            style: "normal",
+            path: '../public/fonts/NeueMontreal-Book.otf',
+            weight: '400',
+            style: 'normal',
         },
         {
-            path: "../public/fonts/NeueMontreal-Medium.otf",
-            weight: "600",
+            path: '../public/fonts/NeueMontreal-Medium.otf',
+            weight: '600',
         },
         {
-            path: "../public/fonts/NeueMontreal-Bold.otf",
-            weight: "800",
-            style: "normal",
+            path: '../public/fonts/NeueMontreal-Bold.otf',
+            weight: '800',
+            style: 'normal',
         },
     ],
 });

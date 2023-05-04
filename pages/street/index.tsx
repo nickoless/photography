@@ -1,17 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Layout from "@/components/Layout";
-import { Section } from "@/styles/common";
+import Layout from '@/components/Layout';
+import useGetPhotos from '@/hooks/useGetPhotos';
+import { Section } from '@/styles/common';
 
 export default function Home() {
+    const { data, loading } = useGetPhotos('street');
+
+    console.log(data);
+
     return (
         <Layout>
             <Section>
                 <HeadingWrapper>
                     <Heading>Street</Heading>
-                    <SubHeading>
-                        Pictures of candid moments while I'm on the go.
-                    </SubHeading>
+                    <SubHeading>Pictures of candid moments while I'm on the go.</SubHeading>
                 </HeadingWrapper>
             </Section>
         </Layout>

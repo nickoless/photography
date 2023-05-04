@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import Categories from "@/components/Categories";
-import Layout from "@/components/Layout";
-import { Section } from "@/styles/common";
+import Categories from '@/components/Categories';
+import Layout from '@/components/Layout';
+import { Section } from '@/styles/common';
 
 export default function Home() {
     return (
@@ -13,9 +13,7 @@ export default function Home() {
                     <Heading>Lee</Heading>
                 </HeadingWrapper>
                 <Heading></Heading>
-                <SubHeading>
-                    Hobbyist photographer. A collection of my favourite shots.
-                </SubHeading>
+                <SubHeading>Hobbyist photographer. A collection of my favourite shots.</SubHeading>
                 <Categories />
             </Section>
         </Layout>
