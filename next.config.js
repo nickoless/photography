@@ -4,6 +4,16 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'iumpottl.sirv.com',
+                port: '',
+                pathname: '/images/**',
+            },
+        ],
+    },
 };
 
 module.exports = nextConfig;

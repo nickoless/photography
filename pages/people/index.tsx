@@ -1,38 +1,26 @@
-import styled from "styled-components";
+import Layout from '@/components/Layout';
+import useGetPhotos from '@/hooks/useGetPhotos';
+import { Heading, HeadingWrapper, Link, Section, SubHeading } from '@/styles/common';
 
-import Layout from "@/components/Layout";
-import { Section } from "@/styles/common";
+import Photos from '@/components/Photos';
 
-export default function Home() {
+export default function People() {
+    const { data, loading } = useGetPhotos('people');
+
     return (
         <Layout>
             <Section>
                 <HeadingWrapper>
-                    <Heading>People</Heading>
-                    <SubHeading>
-                        Pictures of friends and people I've met along the way.
-                    </SubHeading>
+                    <div>
+                        <Heading>People</Heading>
+                        <SubHeading>
+                            Pictures of friends and people I've met along the way.
+                        </SubHeading>
+                    </div>
+                    <Link href='/places'>Places →</Link>
                 </HeadingWrapper>
+                {data && <Photos data={data} category={'people'} />}
             </Section>
         </Layout>
     );
 }
-
-const Heading = styled.h1`
-    margin: 0;
-    margin-left: 0.75rem;
-    font-size: 10rem;
-    line-height: 0.75;
-`;
-
-const SubHeading = styled.h2`
-    margin: 1.5rem;
-    width: 450px;
-    font-size: 1.5rem;
-`;
-
-const HeadingWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-`;

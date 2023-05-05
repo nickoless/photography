@@ -25,8 +25,6 @@ const myFont = localFont({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
-    getToken();
-
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />

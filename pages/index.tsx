@@ -23,8 +23,8 @@ export default function Home() {
 const HeadingWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    align-self: center;
-    margin-bottom: 10rem;
+    margin: auto 0;
+    padding-bottom: 10rem;
 `;
 
 const Heading = styled.h1`

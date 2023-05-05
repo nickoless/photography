@@ -1,10 +1,9 @@
-import NextImage from "next/image";
-import NextLink from "next/link";
-import styled from "styled-components";
+import NextImage from 'next/image';
+import NextLink from 'next/link';
+import styled from 'styled-components';
 
-import PeopleImg from "@/public/people.jpg";
-import PlacesImg from "@/public/places.jpg";
-import StreetImg from "@/public/street.jpg";
+import PeopleImg from '@/public/people.jpg';
+import PlacesImg from '@/public/places.jpg';
 
 const Categories = () => {
     return (
@@ -26,25 +25,18 @@ export default Categories;
 
 const categories = [
     {
-        index: "001",
-        label: "People",
+        index: '001',
+        label: 'People',
         image: PeopleImg,
-        altText: "A partial image of a girl wearing skates",
-        link: "/people",
+        altText: 'A partial image of a girl wearing skates',
+        link: '/people',
     },
     {
-        index: "002",
-        label: "Places",
+        index: '002',
+        label: 'Places',
         image: PlacesImg,
-        altText: "todo",
-        link: "/places",
-    },
-    {
-        index: "003",
-        label: "Street",
-        image: StreetImg,
-        altText: "todo",
-        link: "/street",
+        altText: 'todo',
+        link: '/places',
     },
 ];
 
