@@ -1,9 +1,7 @@
 import NextImage from 'next/image';
 import NextLink from 'next/link';
+import LazyLoad from 'react-lazy-load';
 import styled from 'styled-components';
-
-import PeopleImg from '@/public/people.jpg';
-import PlacesImg from '@/public/places.jpg';
 
 const Categories = () => {
     return (
@@ -14,7 +12,14 @@ const Categories = () => {
                         <Label>{category.index}</Label>
                         <Label>{category.label}</Label>
                     </LabelWrapper>
-                    <Image src={category.image} alt={category.altText} />
+                    <LazyLoad>
+                        <Image
+                            src={category.image}
+                            alt={category.altText}
+                            height={650}
+                            width={650}
+                        />
+                    </LazyLoad>
                 </Link>
             ))}
         </CategoryWrapper>
@@ -27,14 +32,14 @@ const categories = [
     {
         index: '001',
         label: 'People',
-        image: PeopleImg,
+        image: 'https://iumpottl.sirv.com/images/people/_6034932.jpg',
         altText: 'A partial image of a girl wearing skates',
         link: '/people',
     },
     {
         index: '002',
         label: 'Places',
-        image: PlacesImg,
+        image: 'https://iumpottl.sirv.com/images/places/_9044161.jpg',
         altText: 'todo',
         link: '/places',
     },

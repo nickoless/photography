@@ -1,23 +1,23 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 /** Base theme */
 
 export const theme = {
-    background: "#F2F2F2",
-    offBlack: "#343231",
-    offWhite: "#F5F5F4",
+    background: '#F2F2F2',
+    offBlack: '#343231',
+    offWhite: '#F5F5F4',
 };
 
 /** Media queries */
 
 const size = {
-    mobileS: "320px",
-    mobileM: "375px",
-    mobileL: "425px",
-    tablet: "768px",
-    laptop: "1024px",
-    laptopL: "1440px",
-    desktop: "2560px",
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px',
 };
 
 export const device = {
@@ -35,7 +35,6 @@ export const device = {
 
 export const GlobalStyle = createGlobalStyle`
     body {
-        /* cursor: none; */
         margin: 0;
         background: ${theme.background};
         color: ${theme.offBlack};
@@ -45,5 +44,16 @@ export const GlobalStyle = createGlobalStyle`
     h1, h2 {
         text-transform: uppercase;
         font-weight: 600;
+    }
+
+    // react-lazy-load
+
+    .LazyLoad {
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    .is-visible {
+        opacity: 1;
     }
 `;

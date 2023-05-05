@@ -3,12 +3,9 @@ import styled from 'styled-components';
 import NextJsImage from './NextJsImage';
 
 interface Image {
-    contentType: string;
-    filename: string;
-    isDirectory: boolean;
-    meta: { width: number; height: number; duration: number };
-    mtime: string;
-    size: number;
+    src: string;
+    width: number;
+    height: number;
 }
 
 interface Props {
@@ -24,8 +21,8 @@ const Photos = ({ data, category }: Props) => {
                 layout={'masonry'}
                 renderPhoto={NextJsImage}
                 columns={(containerWidth) => {
-                    if (containerWidth < 400) return 1;
-                    if (containerWidth < 800) return 2;
+                    if (containerWidth < 500) return 1;
+                    if (containerWidth < 1000) return 2;
                     return 3;
                 }}
             />
@@ -37,6 +34,5 @@ const Photos = ({ data, category }: Props) => {
 export default Photos;
 
 const PhotoAlbumWrapper = styled.div`
-    margin: 0 1.5rem;
     padding-bottom: 15rem;
 `;

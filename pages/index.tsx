@@ -29,7 +29,7 @@ const HeadingWrapper = styled.div`
 
 const Heading = styled.h1`
     margin: 0;
-    margin-left: 0.75rem;
+    margin-left: -0.75rem;
     font-size: 14rem;
     line-height: 0.75;
 `;
@@ -37,7 +37,6 @@ const Heading = styled.h1`
 const SubHeading = styled.h2`
     position: absolute;
     bottom: 0;
-    margin: 1.5rem;
     width: 450px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 `;
