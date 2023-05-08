@@ -9,18 +9,14 @@ export default function People() {
 
     return (
         <Layout>
-            <Section>
-                <HeadingWrapper>
-                    <div>
-                        <Heading>People</Heading>
-                        <SubHeading>
-                            Pictures of friends and people I've met along the way.
-                        </SubHeading>
-                    </div>
-                    <Link href='/places'>Places →</Link>
-                </HeadingWrapper>
-                {data && <Photos data={data} category={'people'} />}
-            </Section>
+            <HeadingWrapper>
+                <div>
+                    <Heading>People</Heading>
+                    <SubHeading>Pictures of friends and people I've met along the way.</SubHeading>
+                </div>
+                <Link href='/places'>Places →</Link>
+            </HeadingWrapper>
+            {data && <Photos data={data} category={'people'} />}
         </Layout>
     );
 }

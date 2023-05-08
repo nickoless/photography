@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle, theme } from '@/styles/globalStyle';
-import getToken from '@/utils/getToken';
+import { AnimatePresence } from 'framer-motion';
 
 const myFont = localFont({
     src: [
@@ -27,10 +27,12 @@ const myFont = localFont({
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <main className={myFont.className}>
-                <Component {...pageProps} />
-            </main>
+            <AnimatePresence>
+                <GlobalStyle />
+                <main className={myFont.className}>
+                    <Component {...pageProps} />
+                </main>
+            </AnimatePresence>
         </ThemeProvider>
     );
 }

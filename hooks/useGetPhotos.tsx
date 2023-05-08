@@ -7,6 +7,7 @@ const useGetPhotos = (category: string) => {
     const [error, setError] = useState('');
 
     const validToken = hasCookie('sirv_token');
+    // TODO: Set up for other non-local environments
     const body = {
         clientId: process.env.NEXT_PUBLIC_SIRV_ID,
         clientSecret: process.env.NEXT_PUBLIC_SIRV_KEY,

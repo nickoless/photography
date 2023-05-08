@@ -8,16 +8,14 @@ export default function Places() {
 
     return (
         <Layout>
-            <Section>
-                <HeadingWrapper>
-                    <div>
-                        <Heading>Places</Heading>
-                        <SubHeading>Pictures of places I've visited.</SubHeading>
-                    </div>
-                    <Link href='/people'>People →</Link>
-                </HeadingWrapper>
-                {data && <Photos data={data} category={'places'} />}
-            </Section>
+            <HeadingWrapper>
+                <div>
+                    <Heading>Places</Heading>
+                    <SubHeading>Pictures of places I've visited.</SubHeading>
+                </div>
+                <Link href='/people'>People →</Link>
+            </HeadingWrapper>
+            {data && <Photos data={data} category={'places'} />}
         </Layout>
     );
 }

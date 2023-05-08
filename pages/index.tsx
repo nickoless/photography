@@ -1,21 +1,26 @@
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
+import AnimatedHeading from '@/components/AnimatedHeading';
 import Categories from '@/components/Categories';
 import Layout from '@/components/Layout';
-import { Section } from '@/styles/common';
+import { SubHeadingVariant } from '@/styles/common';
+import { device } from '@/styles/globalStyle';
 
 export default function Home() {
     return (
-        <Layout>
-            <Section>
-                <HeadingWrapper>
-                    <Heading>Nick</Heading>
-                    <Heading>Lee</Heading>
-                </HeadingWrapper>
-                <Heading></Heading>
-                <SubHeading>Hobbyist photographer. A collection of my favourite shots.</SubHeading>
-                <Categories />
-            </Section>
+        <Layout sectionAnimation={false}>
+            <HeadingWrapper>
+                <AnimatedHeading heading={'Nick'} />
+                <AnimatedHeading heading={'Lee'} />
+            </HeadingWrapper>
+            <SubHeadingWrapper>
+                <SubHeading variants={SubHeadingVariant} initial='initial' animate='animate'>
+                    Hobbyist photographer. A collection of my favourite shots.
+                </SubHeading>
+            </SubHeadingWrapper>
+            <Categories />
         </Layout>
     );
 }
@@ -23,20 +28,30 @@ export default function Home() {
 const HeadingWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin: auto 0;
-    padding-bottom: 10rem;
+    margin-top: 5rem;
+
+    @media ${device.tablet} {
+        margin: auto 0;
+        padding-bottom: 10rem;
+    }
 `;
 
-const Heading = styled.h1`
-    margin: 0;
-    margin-left: -0.75rem;
-    font-size: 14rem;
-    line-height: 0.75;
+const SubHeadingWrapper = styled.div`
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+
+    @media ${device.tablet} {
+        position: absolute;
+        bottom: 0;
+    }
 `;
 
-const SubHeading = styled.h2`
-    position: absolute;
-    bottom: 0;
-    width: 450px;
-    font-size: 2rem;
+const SubHeading = styled(motion.h2)`
+    font-size: 1.5rem;
+
+    @media ${device.tablet} {
+        font-size: 2rem;
+        width: 450px;
+    }
 `;

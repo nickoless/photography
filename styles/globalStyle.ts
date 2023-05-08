@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-/** Base theme */
+// Base theme
 
 export const theme = {
     background: '#F2F2F2',
@@ -8,7 +8,7 @@ export const theme = {
     offWhite: '#F5F5F4',
 };
 
-/** Media queries */
+// Media queries
 
 const size = {
     mobileS: '320px',
@@ -31,7 +31,7 @@ export const device = {
     desktopL: `(min-width: ${size.desktop})`,
 };
 
-/** Style overrides */
+// Global styles
 
 export const GlobalStyle = createGlobalStyle`
     body {
