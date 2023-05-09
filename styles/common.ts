@@ -145,14 +145,14 @@ export const Link = styled(NextLink)`
         position: absolute;
         width: 100%;
         height: 3px;
-        background: #16151b;
+        background: ${({ theme }) => theme.offBlack};
         top: 45%;
         animation: ${strikeOut} 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
-
     :hover:before {
         animation: ${strikeIn} 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
+
     @media ${device.tablet} {
         font-size: 1.25rem;
     }

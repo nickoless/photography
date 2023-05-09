@@ -1,9 +1,10 @@
 import Layout from '@/components/Layout';
-import useGetPhotos from '@/hooks/useGetPhotos';
-import { Heading, HeadingWrapper, Link, Section, SubHeading } from '@/styles/common';
+import LoadingIndicator from '@/components/LoadingIndicator';
 import Photos from '@/components/Photos';
+import useGetPhotos from '@/hooks/useGetPhotos';
+import { Heading, HeadingWrapper, Link, SubHeading } from '@/styles/common';
 
-export default function Places() {
+const Places = () => {
     const { data, loading } = useGetPhotos('places');
 
     return (
@@ -15,7 +16,9 @@ export default function Places() {
                 </div>
                 <Link href='/people'>People →</Link>
             </HeadingWrapper>
-            {data && <Photos data={data} category={'places'} />}
+            {loading ? <LoadingIndicator /> : data && <Photos data={data} category={'places'} />}
         </Layout>
     );
-}
+};
+
+export default Places;

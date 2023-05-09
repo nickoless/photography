@@ -17,12 +17,14 @@ const Categories = () => {
                         <Label>{category.label}</Label>
                     </LabelWrapper>
                     <LazyLoad>
-                        <Image
-                            src={category.image}
-                            alt={category.altText}
-                            height={650}
-                            width={650}
-                        />
+                        <ImageWrapper>
+                            <Image
+                                src={category.image}
+                                alt={category.altText}
+                                height={650}
+                                width={650}
+                            />
+                        </ImageWrapper>
                     </LazyLoad>
                 </Link>
             ))}
@@ -63,20 +65,33 @@ const CategoryWrapper = styled.div`
     }
 `;
 
-const Link = styled(motion(NextLink))`
-    flex: 1;
-    text-decoration: none;
-    color: ${({ theme }) => theme.offBlack};
+const ImageWrapper = styled.div`
+    height: 150px;
+    overflow: hidden;
+
+    @media ${device.tablet} {
+        height: 250px;
+    }
 `;
 
 const Image = styled(NextImage)`
     object-fit: cover;
     height: 150px;
     width: 100%;
+    transition: transform 0.5s;
 
     @media ${device.tablet} {
         height: 250px;
         width: 250px;
+    }
+`;
+const Link = styled(motion(NextLink))`
+    flex: 1;
+    text-decoration: none;
+    color: ${({ theme }) => theme.offBlack};
+
+    &:hover ${Image} {
+        transform: scale(1.1);
     }
 `;
 

@@ -14,7 +14,7 @@ const Photos = ({ data, category }: Props) => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
     return (
-        <div style={{ paddingBottom: '4rem' }}>
+        <>
             <PhotoAlbumWrapper>
                 <PhotoAlbum
                     photos={data}
@@ -27,10 +27,12 @@ const Photos = ({ data, category }: Props) => {
                     }}
                 />
             </PhotoAlbumWrapper>
-            <ScrollToTop href='#' onClick={() => scrollToTop()}>
-                Back to Top
-            </ScrollToTop>
-        </div>
+            <span style={{ paddingBottom: '3rem' }}>
+                <ScrollToTop href='#' onClick={() => scrollToTop()}>
+                    Back to Top
+                </ScrollToTop>
+            </span>
+        </>
     );
 };
 
@@ -42,5 +44,4 @@ const PhotoAlbumWrapper = styled.div`
 
 const ScrollToTop = styled(Link)`
     margin: auto;
-    margin-bottom: 4rem;
 `;

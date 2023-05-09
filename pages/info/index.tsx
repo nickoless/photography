@@ -38,7 +38,9 @@ export default function Home() {
                     </Paragraph>
                 </ParagraphWrapper>
             </ContentWrapper>
-            <Link href='https://www.instagram.com/orientalshrug'>Instagram →</Link>
+            <span style={{ paddingBottom: '3rem' }}>
+                <Link href='https://www.instagram.com/orientalshrug'>Instagram →</Link>
+            </span>
         </Layout>
     );
 }
@@ -81,10 +83,8 @@ const Paragraph = styled.p`
 
 const Link = styled(LinkEl)`
     margin-top: 5rem;
-    padding-bottom: 3rem;
 
     @media ${device.laptop} {
         margin-left: 5rem;
-        padding-bottom: 0;
     }
 `;
