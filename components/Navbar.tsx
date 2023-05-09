@@ -24,5 +24,5 @@ const NavbarEl = styled.nav`
 `;
 
 const NavLink = styled(LinkEl)`
-    padding-right: 1.5rem;
+    margin-right: 1.5rem;
 `;

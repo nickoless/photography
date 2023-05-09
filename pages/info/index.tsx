@@ -15,8 +15,7 @@ export default function Home() {
                     <SubHeading>About</SubHeading>
                     <Paragraph>
                         I am a hobbyist photographer who appreciates simplicity - I tend to opt for
-                        a balanced and minimal composition in my photos, as I am generally
-                        overwhelmed by clutter.
+                        more of a balanced and minimal composition in my photos.
                     </Paragraph>
                     <Paragraph>
                         I am always open for casual photoshoots or to collaborate on projects. Feel
@@ -56,10 +55,12 @@ const ContentWrapper = styled.div`
 const HeadingWrapper = styled.div`
     display: flex;
     align-items: center;
-    min-height: 200px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 
     @media ${device.laptop} {
-        margin-bottom: 3rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
     }
 `;
 
@@ -80,10 +81,10 @@ const Paragraph = styled.p`
 
 const Link = styled(LinkEl)`
     margin-top: 5rem;
-    margin-bottom: 3rem;
+    padding-bottom: 3rem;
 
     @media ${device.laptop} {
         margin-left: 5rem;
-        margin-bottom: 0;
+        padding-bottom: 0;
     }
 `;

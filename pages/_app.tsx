@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={theme}>
             <AnimatePresence>
                 <GlobalStyle />
-                <main className={myFont.className}>
+                <main key={'main'} className={myFont.className}>
                     <Component {...pageProps} />
                 </main>
             </AnimatePresence>

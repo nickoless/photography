@@ -9,7 +9,7 @@ const NextJsImage = ({
 }: RenderPhotoProps) => {
     return (
         <div style={{ ...wrapperStyle, position: 'relative' }}>
-            <LazyLoad>
+            <LazyLoad offset={1000}>
                 <Image
                     fill
                     src={photo}
