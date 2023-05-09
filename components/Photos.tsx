@@ -1,12 +1,8 @@
 import { PhotoAlbum } from 'react-photo-album';
 import styled from 'styled-components';
-import NextJsImage from './NextJsImage';
 
-interface Image {
-    src: string;
-    width: number;
-    height: number;
-}
+import NextJsImage from './NextJsImage';
+import { Image } from '@/hooks/useGetPhotos';
 
 interface Props {
     data: Image[];

@@ -1,8 +1,27 @@
 import { getCookie, hasCookie, setCookie } from 'cookies-next';
 import { useEffect, useState } from 'react';
 
+interface SirvAsset {
+    contentType: string;
+    filename: string;
+    isDirectory: boolean;
+    meta: { width: number; height: number; duration: number };
+    mtime: string;
+    size: number;
+}
+
+interface Data {
+    contents: SirvAsset[];
+}
+
+export interface Image {
+    src: string;
+    width: number;
+    height: number;
+}
+
 const useGetPhotos = (category: string) => {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<Image[] | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
@@ -25,7 +44,10 @@ const useGetPhotos = (category: string) => {
                     },
                 })
                     .then((res) => res.json())
-                    .then((res) => setCookie('sirv_token', res.token, { maxAge: res.expiresIn }));
+                    .then((res: { token: string; expiresIn: number }) =>
+                        setCookie('sirv_token', res.token, { maxAge: res.expiresIn })
+                    )
+                    .catch((error) => console.log(error));
             }
 
             // Get photo data based on specified page
@@ -40,19 +62,19 @@ const useGetPhotos = (category: string) => {
                 }
             )
                 .then((res) => res.json())
-                .then((res) => {
+                .then((res: Data) => {
                     const newDataMap = res?.contents.map((image) => {
                         return {
                             src: `https://iumpottl.sirv.com/images/${category}/${image.filename}`,
                             width: image.meta.width,
                             height: image.meta.height,
-                        };
+                        } as Image;
                     });
 
-                    setError(res.error);
                     setData(newDataMap);
                     setLoading(false);
-                });
+                })
+                .catch((error) => console.log(error));
         })();
     }, []);
 
