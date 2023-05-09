@@ -51,13 +51,13 @@ const categories = [
 
 const CategoryWrapper = styled.div`
     display: flex;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 1rem;
+    margin-top: auto;
     gap: 1rem;
 
     @media ${device.tablet} {
+        position: absolute;
+        bottom: 0;
+        right: 0;
         margin: 1.5rem;
         gap: 1.5rem;
     }

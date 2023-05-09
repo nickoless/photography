@@ -11,7 +11,7 @@ export default function Places() {
             <HeadingWrapper>
                 <div>
                     <Heading>Places</Heading>
-                    <SubHeading>Pictures of places I've visited.</SubHeading>
+                    <SubHeading>Pictures of places I&apos;ve visited.</SubHeading>
                 </div>
                 <Link href='/people'>People →</Link>
             </HeadingWrapper>

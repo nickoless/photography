@@ -5,7 +5,7 @@ import { createGlobalStyle } from 'styled-components';
 export const theme = {
     background: '#F2F2F2',
     offBlack: '#343231',
-    offWhite: '#F5F5F4',
+    offWhite: '#E7E9EA',
 };
 
 // Media queries

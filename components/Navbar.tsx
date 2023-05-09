@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import { Link as LinkEl } from '@/styles/common';
 import { device } from '@/styles/globalStyle';
 
 const Navbar = () => {
@@ -22,15 +23,6 @@ const NavbarEl = styled.nav`
     width: 100%;
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(LinkEl)`
     padding-right: 1.5rem;
-    color: ${({ theme }) => theme.offBlack};
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    @media ${device.tablet} {
-        font-size: 1.5rem;
-    }
 `;

@@ -13,13 +13,17 @@ export const SectionVariant = {
 };
 
 export const SubHeadingVariant = {
-    initial: { opacity: 0, y: 400 },
-    animate: { opacity: 1, y: 0, transition: { ease: 'easeInOut', delay: 2, duration: 1 } },
+    initial: { opacity: 0, x: -400 },
+    animate: {
+        opacity: 1,
+        x: 0,
+        transition: { ease: 'easeInOut', delay: 1.5, duration: 1 },
+    },
 };
 
 export const LinkVariant = {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { delay: 2.5, duration: 1 } },
+    animate: { opacity: 1, transition: { delay: 2, duration: 0.75 } },
 };
 
 export const BannerVariant = {
@@ -53,7 +57,7 @@ export const Section = styled(motion.section)`
     padding: 1rem;
 
     @media ${device.tablet} {
-        padding: 1.5rem;
+        padding: 0 1.5rem 1.5rem 1.5rem;
     }
 `;
 
@@ -65,6 +69,9 @@ export const Heading = styled.h1`
     line-height: 0.75;
 
     @media ${device.tablet} {
+        font-size: 6rem;
+    }
+    @media ${device.laptop} {
         font-size: 8rem;
     }
 `;
@@ -74,7 +81,13 @@ export const SubHeading = styled(motion.h2)`
     font-size: 1.5rem;
 
     @media ${device.tablet} {
-        width: 450px;
+        width: 575px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: 1.75rem;
+    }
+    @media ${device.laptop} {
+        font-size: 2rem;
     }
 `;
 
@@ -82,13 +95,27 @@ export const HeadingWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 350px;
+    min-height: 275px;
+
+    @media ${device.tablet} {
+        min-height: 300px;
+    }
+    @media ${device.laptop} {
+        min-height: 350px;
+    }
 `;
 
 export const Link = styled(NextLink)`
     color: ${({ theme }) => theme.offBlack};
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
+
+    @media ${device.tablet} {
+        font-size: 1.25rem;
+    }
+    @media ${device.laptop} {
+        font-size: 1.5rem;
+    }
 `;

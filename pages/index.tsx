@@ -30,7 +30,7 @@ const HeadingWrapper = styled.div`
     flex-direction: column;
     margin-top: 5rem;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         margin: auto 0;
         padding-bottom: 10rem;
     }
@@ -42,6 +42,9 @@ const SubHeadingWrapper = styled.div`
     overflow: hidden;
 
     @media ${device.tablet} {
+        width: 450px;
+    }
+    @media ${device.laptop} {
         position: absolute;
         bottom: 0;
     }
@@ -50,8 +53,7 @@ const SubHeadingWrapper = styled.div`
 const SubHeading = styled(motion.h2)`
     font-size: 1.5rem;
 
-    @media ${device.tablet} {
+    @media ${device.laptop} {
         font-size: 2rem;
-        width: 450px;
     }
 `;

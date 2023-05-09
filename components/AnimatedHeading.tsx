@@ -25,13 +25,16 @@ const Letter = styled(motion.span)`
 
 const MainHeading = styled(motion.h1)`
     margin: 0;
-    margin-left: -0.75rem;
     height: 100px;
     font-size: 8rem;
     line-height: 0.75;
     overflow: hidden;
 
     @media ${device.tablet} {
+        font-size: 12rem;
+        height: 150px;
+    }
+    @media ${device.laptop} {
         font-size: 14rem;
         height: 175px;
     }

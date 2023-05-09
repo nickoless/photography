@@ -12,7 +12,9 @@ export default function People() {
             <HeadingWrapper>
                 <div>
                     <Heading>People</Heading>
-                    <SubHeading>Pictures of friends and people I've met along the way.</SubHeading>
+                    <SubHeading>
+                        Pictures of friends and people I&apos;ve met along the way.
+                    </SubHeading>
                 </div>
                 <Link href='/places'>Places →</Link>
             </HeadingWrapper>

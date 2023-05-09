@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 import Layout from '@/components/Layout';
-import { Heading, Link, Section, SubHeading } from '@/styles/common';
+import { Heading, Link as LinkEl, SubHeading } from '@/styles/common';
+import { device } from '@/styles/globalStyle';
 
 export default function Home() {
     return (
@@ -38,36 +39,51 @@ export default function Home() {
                     </Paragraph>
                 </ParagraphWrapper>
             </ContentWrapper>
-            <Link
-                href='https://www.instagram.com/orientalshrug'
-                style={{ marginTop: '5rem', marginLeft: '5rem' }}
-            >
-                Instagram →
-            </Link>
+            <Link href='https://www.instagram.com/orientalshrug'>Instagram →</Link>
         </Layout>
     );
 }
 
 const ContentWrapper = styled.div`
     display: flex;
+    flex-direction: column;
+
+    @media ${device.laptop} {
+        flex-direction: row;
+    }
 `;
 
 const HeadingWrapper = styled.div`
     display: flex;
     align-items: center;
-    height: 200px;
-    margin-bottom: 3srem;
+    min-height: 200px;
+
+    @media ${device.laptop} {
+        margin-bottom: 3rem;
+    }
 `;
 
 const ParagraphWrapper = styled.article`
-    margin-left: 5rem;
-    width: 650px;
-
     a {
         color: ${({ theme }) => theme.offBlack};
+    }
+
+    @media ${device.laptop} {
+        width: 650px;
+        margin-left: 5rem;
     }
 `;
 
 const Paragraph = styled.p`
     font-size: 1.5rem;
+`;
+
+const Link = styled(LinkEl)`
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+
+    @media ${device.laptop} {
+        margin-left: 5rem;
+        margin-bottom: 0;
+    }
 `;
