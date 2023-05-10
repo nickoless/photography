@@ -45,15 +45,4 @@ export const GlobalStyle = createGlobalStyle`
         text-transform: uppercase;
         font-weight: 600;
     }
-
-    // react-lazy-load
-
-    .LazyLoad {
-        opacity: 0;
-        transition: all 0.5s;
-    }
-
-    .is-visible {
-        opacity: 1;
-    }
 `;

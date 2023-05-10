@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import LazyLoad from 'react-lazy-load';
 import type { RenderPhotoProps } from 'react-photo-album';
 
 const NextJsImage = ({
@@ -9,14 +8,12 @@ const NextJsImage = ({
 }: RenderPhotoProps) => {
     return (
         <div style={{ ...wrapperStyle, position: 'relative' }}>
-            <LazyLoad offset={1000}>
-                <Image
-                    fill
-                    src={photo}
-                    placeholder={'blurDataURL' in photo ? 'blur' : undefined}
-                    {...{ alt, title, sizes, className, onClick }}
-                />
-            </LazyLoad>
+            <Image
+                fill
+                src={photo}
+                placeholder={'blurDataURL' in photo ? 'blur' : undefined}
+                {...{ alt, title, sizes, className, onClick }}
+            />
         </div>
     );
 };

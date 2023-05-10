@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
-import LazyLoad from 'react-lazy-load';
 import styled from 'styled-components';
 
 import { LinkVariant } from '@/styles/common';
@@ -16,16 +15,15 @@ const Categories = () => {
                         <Label>{category.index}</Label>
                         <Label>{category.label}</Label>
                     </LabelWrapper>
-                    <LazyLoad>
-                        <ImageWrapper>
-                            <Image
-                                src={category.image}
-                                alt={category.altText}
-                                height={650}
-                                width={650}
-                            />
-                        </ImageWrapper>
-                    </LazyLoad>
+                    <ImageWrapper>
+                        <Image
+                            src={category.image}
+                            alt={category.altText}
+                            blurDataURL={category.image}
+                            height={650}
+                            width={650}
+                        />
+                    </ImageWrapper>
                 </Link>
             ))}
         </CategoryWrapper>
