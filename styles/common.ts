@@ -104,32 +104,6 @@ export const HeadingWrapper = styled.div`
     }
 `;
 
-const strikeIn = keyframes`
-    0% {
-        width: 0;
-        left: 0;
-        right: auto;
-   }
-    100% {
-        left: 0;
-        right: auto;
-        width: 100%;
-   }
-`;
-
-const strikeOut = keyframes`
-    0%{
-        width: 100%;
-        left: auto;
-        right: 0;
-   }
-    100%{
-        width: 0;
-        left: auto;
-        right: 0;
-   }
-`;
-
 export const Link = styled(NextLink)`
     position: relative;
     display: inline-block;
@@ -140,17 +114,8 @@ export const Link = styled(NextLink)`
     text-decoration: none;
     text-transform: uppercase;
 
-    :before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: ${({ theme }) => theme.offBlack};
-        top: 45%;
-        animation: ${strikeOut} 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
-    }
-    :hover:before {
-        animation: ${strikeIn} 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    :hover {
+        border-bottom: 2px solid ${({ theme }) => theme.offBlack};
     }
 
     @media ${device.tablet} {

@@ -12,8 +12,8 @@ export default function Home() {
     return (
         <Layout sectionAnimation={false}>
             <HeadingWrapper>
-                <AnimatedHeading heading={'Nick'} />
-                <AnimatedHeading heading={'Lee'} />
+                <AnimatedHeading aria-label='Nick' heading={'Nick'} />
+                <AnimatedHeading aria-label='Lee' heading={'Lee'} />
             </HeadingWrapper>
             <SubHeadingWrapper>
                 <SubHeading variants={SubHeadingVariant} initial='initial' animate='animate'>
