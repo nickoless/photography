@@ -116,6 +116,7 @@ export const Link = styled(NextLink)`
 
     :hover {
         border-bottom: 2px solid ${({ theme }) => theme.offBlack};
+        margin-bottom: -2px;
     }
 
     @media ${device.tablet} {
