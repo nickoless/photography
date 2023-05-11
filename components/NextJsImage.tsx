@@ -12,7 +12,8 @@ const NextJsImage = ({
                 fill
                 src={photo}
                 placeholder={'blurDataURL' in photo ? 'blur' : undefined}
-                {...{ alt, title, sizes, className, onClick }}
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                {...{ alt, title, className, onClick }}
             />
         </div>
     );
