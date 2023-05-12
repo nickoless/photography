@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
+import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyle, theme } from '@/styles/globalStyle';
@@ -22,6 +23,7 @@ const myFont = localFont({
             style: 'normal',
         },
     ],
+    fallback: ['Sans-serif'],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -29,6 +31,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={theme}>
             <AnimatePresence>
                 <GlobalStyle />
+                <Head>
+                    <title>Nick Lee - Photography</title>
+                </Head>
                 <main key={'main'} className={myFont.className}>
                     <Component {...pageProps} />
                 </main>
