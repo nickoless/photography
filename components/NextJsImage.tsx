@@ -1,5 +1,6 @@
-import Image from 'next/image';
+import NextImage from 'next/image';
 import type { RenderPhotoProps } from 'react-photo-album';
+import styled from 'styled-components';
 
 const NextJsImage = ({
     photo,
@@ -20,3 +21,10 @@ const NextJsImage = ({
 };
 
 export default NextJsImage;
+
+const Image = styled(NextImage)`
+    :hover {
+        opacity: 0.85;
+        transition: opacity 0.3s;
+    }
+`;
