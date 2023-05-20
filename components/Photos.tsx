@@ -42,11 +42,14 @@ const Photos = ({ data, category }: Props) => {
                 close={() => setIndex(-1)}
                 plugins={[Thumbnails, Zoom]}
             />
-            <span style={{ paddingBottom: '3rem' }}>
-                <ScrollToTop href='#' onClick={() => scrollToTop()}>
+            <LinkWrapper>
+                <Link href='#' onClick={() => scrollToTop()}>
                     Back to Top
-                </ScrollToTop>
-            </span>
+                </Link>
+                <Link href={`/${category === 'people' ? 'places' : 'people'}`}>
+                    {category === 'people' ? 'Places →' : 'People →'}
+                </Link>
+            </LinkWrapper>
         </>
     );
 };
@@ -57,6 +60,8 @@ const PhotoAlbumWrapper = styled.div`
     padding-bottom: 15rem;
 `;
 
-const ScrollToTop = styled(Link)`
-    margin: auto;
+const LinkWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
 `;

@@ -17,7 +17,7 @@ export default function Home() {
             </HeadingWrapper>
             <SubHeadingWrapper>
                 <SubHeading variants={SubHeadingVariant} initial='initial' animate='animate'>
-                    Hobbyist photographer. A collection of my favourite shots.
+                    Personal photography. A collection of my favourite shots.
                 </SubHeading>
             </SubHeadingWrapper>
             <Categories />
