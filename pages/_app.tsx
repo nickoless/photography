@@ -32,7 +32,11 @@ export default function App({ Component, pageProps }: AppProps) {
             <AnimatePresence>
                 <GlobalStyle />
                 <Head>
-                    <title>Nick Lee - Photography</title>
+                    <title>Nick Lee | Photography</title>
+                    <meta
+                        name='description'
+                        content='Montreal based photographer. A collection of personal photographs. Open to collaboration and any other opportunities.'
+                    />
                 </Head>
                 <main key={'main'} className={myFont.className}>
                     <Component {...pageProps} />
