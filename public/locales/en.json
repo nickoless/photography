@@ -1,0 +1,21 @@
+{
+	"home": {
+		"subheading": "Personal photography. A collection of my favourite shots."
+	},
+	"info": {
+		"heading": "About us",
+		"subheading": "I am a hobbyist photographer who appreciates simplicity - I tend to opt for more of a balanced and minimal composition in my photos.",
+		"paragraph1": "I am always open for casual photoshoots or to collaborate on projects. Feel free to reach out to me via email at{' '} <a href='mailto: nickoless.lee@gmail.com'>nickoless.lee@gmail.com</a> or DM me on instagram.",
+		"subheading2": "Kit"
+	},
+	"people": {
+		"heading": "People",
+		"subheading": "Pictures of friends and people I've met along the way.",
+		"placesLink": "Places →"
+	},
+	"places": {
+		"heading": "Places",
+		"subheading": "Pictures of places I've visited.",
+		"peopleLink": "People →"
+	}
+}
