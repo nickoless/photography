@@ -1,21 +1,30 @@
 {
-	"home": {
+	"Home": {
 		"subheading": "La photographie personnelle. Une collection de mes photos préférées."
 	},
-	"info": {
-		"heading": "À propos",
-		"subheading": "Je suis un photographe amateur qui apprécie la simplicité - je préfère une composition équilibrée et minimale dans mes photos.",
-		"paragraph1": "Je suis toujours disponible pour des séances photo ou pour collaborer dans des projets. N'hésitez pas à m'envoyer un courriel ou à m'envoyer un MP sur Instagram.",
-		"subheading2": "Kit"
+	"Info": {
+		"heading": "Info",
+		"subheading": "À propos",
+		"paragraph": "Je suis un photographe amateur qui apprécie la simplicité - je préfère une composition équilibrée et minimale dans mes photos.",
+		"paragraph2": "Je suis toujours disponible pour des séances photo ou pour collaborer dans des projets. N'hésitez pas à m'envoyer un courriel à <a href='mailto: nickoless.lee@gmail.com'>nickoless.lee@gmail.com</a> ou à m'envoyer un MP sur Instagram.",
+		"subheading2": "Équipement"
 	},
-	"people": {
+	"People": {
 		"heading": "Des gens",
 		"subheading": "Des photos des amies et des gens qui j'ai rencontré en chemin.",
 		"placesLink": "Des lieux →"
 	},
-	"places": {
-		"heading": "Des endroits",
+	"Places": {
+		"heading": "Des lieux",
 		"subheading": "Des photos des lieux que j'ai visités.",
 		"peopleLink": "Des gens →"
+	},
+	"Navbar": {
+		"home": "Accueil",
+		"info": "Info"
+	},
+	"Categories": {
+		"people": "Des gens",
+		"places": "Des lieux"
 	}
 }
