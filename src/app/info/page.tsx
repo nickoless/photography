@@ -1,6 +1,5 @@
-import styled from 'styled-components';
-import { GetStaticProps } from 'next';
 import { useTranslations } from 'next-intl';
+import styled from 'styled-components';
 
 import Layout from '@/components/Layout';
 import { Heading, Link as LinkEl, SubHeading } from '@/styles/common';
@@ -21,8 +20,8 @@ export default function Home() {
 				<ParagraphWrapper>
 					<SubHeading>{t('subheading')}</SubHeading>
 					<Paragraph>{t('paragraph')}</Paragraph>
-					<Paragraph>{t.markup('paragraph2')}</Paragraph>
-					<Paragraph>{t.markup('paragraph3')}</Paragraph>
+					<Paragraph>{t('paragraph2')}</Paragraph>
+					{/* <Paragraph>{t.markup('paragraph3')}</Paragraph> */}
 				</ParagraphWrapper>
 				<ParagraphWrapper>
 					<SubHeading>Kit</SubHeading>
@@ -43,14 +42,6 @@ export default function Home() {
 		</Layout>
 	);
 }
-
-export const getStaticProps = (async (context) => {
-	return {
-		props: {
-			messages: (await import(`public/locales/${context.locale}.json`)).default,
-		},
-	};
-}) satisfies GetStaticProps;
 
 const ContentWrapper = styled.div`
 	display: flex;

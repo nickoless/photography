@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
-import { GetStaticProps } from 'next';
 import { useTranslations } from 'next-intl';
+import styled from 'styled-components';
 
 import AnimatedHeading from '@/components/AnimatedHeading';
 import Categories from '@/components/Categories';
@@ -13,28 +12,21 @@ export default function Home() {
 	const t = useTranslations('Home');
 
 	return (
-		<Layout sectionAnimation={false}>
-			<HeadingWrapper>
-				<AnimatedHeading aria-label='Nick' heading={'Nick'} />
-				<AnimatedHeading aria-label='Lee' heading={'Lee'} />
-			</HeadingWrapper>
-			<SubHeadingWrapper>
-				<SubHeading variants={SubHeadingVariant} initial='initial' animate='animate'>
-					{t('subheading')}
-				</SubHeading>
-			</SubHeadingWrapper>
-			<Categories />
-		</Layout>
+		<div>hello</div>
+		// <Layout sectionAnimation={false}>
+		// 	<HeadingWrapper>
+		// 		<AnimatedHeading aria-label='Nick' heading={'Nick'} />
+		// 		<AnimatedHeading aria-label='Lee' heading={'Lee'} />
+		// 	</HeadingWrapper>
+		// 	<SubHeadingWrapper>
+		// 		<SubHeading variants={SubHeadingVariant} initial='initial' animate='animate'>
+		// 			{t('subheading')}
+		// 		</SubHeading>
+		// 	</SubHeadingWrapper>
+		// 	<Categories />
+		// </Layout>
 	);
 }
-
-export const getStaticProps = (async (context) => {
-	return {
-		props: {
-			messages: (await import(`public/locales/${context.locale}.json`)).default,
-		},
-	};
-}) satisfies GetStaticProps;
 
 const HeadingWrapper = styled.div`
 	display: flex;

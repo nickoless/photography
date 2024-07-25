@@ -12,12 +12,12 @@ const rotation = keyframes` 0% {
 }`;
 
 const Indicator = styled.span`
-    width: 48px;
-    height: 48px;
-    border: ${({ theme }) => `5px solid ${theme.offBlack}`};
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: ${rotation} 1s linear infinite;
+	width: 48px;
+	height: 48px;
+	border: ${({ theme }) => `5px solid ${theme.offBlack}`};
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: ${rotation} 1s linear infinite;
 `;

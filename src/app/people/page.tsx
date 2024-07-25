@@ -1,4 +1,5 @@
-import { GetStaticProps } from 'next';
+'use client';
+
 import { useTranslations } from 'next-intl';
 
 import Layout from '@/components/Layout';
@@ -7,9 +8,9 @@ import Photos from '@/components/Photos';
 import useGetPhotos from '@/hooks/useGetPhotos';
 import { Heading, HeadingWrapper, Link, SubHeading } from '@/styles/common';
 
-const Places = () => {
-	const { data, loading } = useGetPhotos('places');
-	const t = useTranslations('Places');
+const People = () => {
+	const { data, loading } = useGetPhotos('people');
+	const t = useTranslations('People');
 
 	return (
 		<Layout>
@@ -18,19 +19,11 @@ const Places = () => {
 					<Heading>{t('heading')}</Heading>
 					<SubHeading>{t('subheading')}</SubHeading>
 				</div>
-				<Link href='/people'>{t('peopleLink')}</Link>
+				<Link href='/places'>{t('placesLink')}</Link>
 			</HeadingWrapper>
-			{loading ? <LoadingIndicator /> : data && <Photos data={data} category={'places'} />}
+			{loading ? <LoadingIndicator /> : data && <Photos data={data} category={'people'} />}
 		</Layout>
 	);
 };
 
-export default Places;
-
-export const getStaticProps = (async (context) => {
-	return {
-		props: {
-			messages: (await import(`public/locales/${context.locale}.json`)).default,
-		},
-	};
-}) satisfies GetStaticProps;
+export default People;
