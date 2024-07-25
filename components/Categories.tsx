@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import NextImage from 'next/image';
-import NextLink from 'next/link';
-import styled from 'styled-components';
 import { useTranslations } from 'next-intl';
+import NextImage from 'next/image';
+import styled from 'styled-components';
 
+import { Link as NextLink } from '@/src/navigation';
 import { LinkVariant } from '@/styles/common';
 import { device } from '@/styles/globalStyle';
 
