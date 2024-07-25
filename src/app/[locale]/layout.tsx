@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
+import myFont from '@/public/fonts/NeueMontreal';
 import ThemeWrapper from './theme-wrapper';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -8,12 +9,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 	const messages = await getMessages();
 
 	return (
-		<html lang='en'>
+		<html lang='en' className={myFont.className}>
 			<body>
 				{/* Layout UI */}
 				<main>
 					<ThemeWrapper>
-						{' '}
 						<NextIntlClientProvider messages={messages}>
 							{children}
 						</NextIntlClientProvider>

@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import styled from 'styled-components';
 
-import Layout from '@/components/Layout';
+import Layout from '@/src/app/[locale]/components/Layout';
 import { Heading, Link as LinkEl, SubHeading } from '@/styles/common';
 import { device } from '@/styles/globalStyle';
 

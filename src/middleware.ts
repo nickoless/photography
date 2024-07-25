@@ -1,9 +1,9 @@
 import createMiddleware from 'next-intl/middleware';
-import { locales } from '../config';
+import { locales } from './config';
 
 export default createMiddleware({
 	// A list of all locales that are supported
-	locales,
+	locales: ['en', 'fr'],
 	// Used when no locale matches
 	defaultLocale: 'en',
 });

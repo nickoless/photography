@@ -2,9 +2,9 @@
 
 import { useTranslations } from 'next-intl';
 
-import Layout from '@/components/Layout';
-import LoadingIndicator from '@/components/LoadingIndicator';
-import Photos from '@/components/Photos';
+import Layout from '@/src/app/[locale]/components/Layout';
+import LoadingIndicator from '@/src/app/[locale]/components/LoadingIndicator';
+import Photos from '@/src/app/[locale]/components/Photos';
 import useGetPhotos from '@/hooks/useGetPhotos';
 import { Heading, HeadingWrapper, Link, SubHeading } from '@/styles/common';
 

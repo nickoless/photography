@@ -1,10 +1,12 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import styled from 'styled-components';
 
-import AnimatedHeading from '@/components/AnimatedHeading';
-import Categories from '@/components/Categories';
-import Layout from '@/components/Layout';
+import AnimatedHeading from '@/src/app/[locale]/components/AnimatedHeading';
+import Categories from '@/src/app/[locale]/components/Categories';
+import Layout from '@/src/app/[locale]/components/Layout';
 import { SubHeadingVariant } from '@/styles/common';
 import { device } from '@/styles/globalStyle';
 
@@ -12,19 +14,18 @@ export default function Home() {
 	const t = useTranslations('Home');
 
 	return (
-		<div>hello</div>
-		// <Layout sectionAnimation={false}>
-		// 	<HeadingWrapper>
-		// 		<AnimatedHeading aria-label='Nick' heading={'Nick'} />
-		// 		<AnimatedHeading aria-label='Lee' heading={'Lee'} />
-		// 	</HeadingWrapper>
-		// 	<SubHeadingWrapper>
-		// 		<SubHeading variants={SubHeadingVariant} initial='initial' animate='animate'>
-		// 			{t('subheading')}
-		// 		</SubHeading>
-		// 	</SubHeadingWrapper>
-		// 	<Categories />
-		// </Layout>
+		<Layout sectionAnimation={false}>
+			<HeadingWrapper>
+				<AnimatedHeading aria-label='Nick' heading={'Nick'} />
+				<AnimatedHeading aria-label='Lee' heading={'Lee'} />
+			</HeadingWrapper>
+			<SubHeadingWrapper>
+				<SubHeading variants={SubHeadingVariant} initial='initial' animate='animate'>
+					{t('subheading')}
+				</SubHeading>
+			</SubHeadingWrapper>
+			<Categories />
+		</Layout>
 	);
 }
 
