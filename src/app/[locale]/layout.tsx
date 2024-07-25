@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
 import myFont from '@/public/fonts/NeueMontreal';
+import StyledComponentsRegistry from './registry';
 import ThemeWrapper from './theme-wrapper';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -11,14 +12,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 	return (
 		<html lang='en' className={myFont.className}>
 			<body>
-				{/* Layout UI */}
-				<main>
+				<StyledComponentsRegistry>
 					<ThemeWrapper>
 						<NextIntlClientProvider messages={messages}>
 							{children}
 						</NextIntlClientProvider>
 					</ThemeWrapper>
-				</main>
+				</StyledComponentsRegistry>
 			</body>
 		</html>
 	);
