@@ -1,18 +1,19 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import styled from 'styled-components';
 
-import { Link } from '@/styles/common';
+import { Link, LocaleLink } from '@/styles/common';
+import ChangeLocale from './ChangeLocale';
 
 const Navbar = () => {
 	const t = useTranslations('Navbar');
+	const locale = JSON.stringify(useLocale());
 
 	return (
 		<NavbarEl>
-			<NavLink href='/'>{t('home')}</NavLink>
-			<NavLink href='/info'>{t('info')}</NavLink>
-			<Link href='/' locale='fr'>
-				Change Lang
-			</Link>
+			<Link href='/'>{t('home')}</Link>
+			<Link href='/info'>{t('info')}</Link>
+			<LocaleLink>|</LocaleLink>
+			<ChangeLocale locale={'en'} />
 		</NavbarEl>
 	);
 };
@@ -25,8 +26,12 @@ const NavbarEl = styled.nav`
 	align-items: center;
 	height: 80px;
 	width: 100%;
+
+	> * {
+		margin-right: 1.5rem;a
+	}
 `;
 
-const NavLink = styled(Link)`
-	margin-right: 1.5rem;
-`;
+// const NavLink = styled(Link)`
+// 	margin-right: 1.5rem;
+// `;

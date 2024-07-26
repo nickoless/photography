@@ -20,7 +20,12 @@ export default function Home() {
 				<AnimatedHeading aria-label='Lee' heading={'Lee'} />
 			</HeadingWrapper>
 			<SubHeadingWrapper>
-				<SubHeading variants={SubHeadingVariant} initial='initial' animate='animate'>
+				<SubHeading
+					key={'subheading'}
+					variants={SubHeadingVariant}
+					initial='initial'
+					animate='animate'
+				>
 					{t('subheading')}
 				</SubHeading>
 			</SubHeadingWrapper>

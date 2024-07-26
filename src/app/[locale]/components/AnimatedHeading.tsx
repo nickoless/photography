@@ -17,6 +17,7 @@ const AnimatedHeading = ({ heading }: Props) => (
 		))}
 	</MainHeading>
 );
+
 export default AnimatedHeading;
 
 const Letter = styled(motion.span)`

@@ -3,7 +3,7 @@ import { getMessages } from 'next-intl/server';
 
 import myFont from '@/public/fonts/NeueMontreal';
 import StyledComponentsRegistry from './registry';
-import ThemeWrapper from './theme-wrapper';
+import ThemeWrapper from './ThemeWrapper';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	// Receive messages provided in `i18n.ts`

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { Link as NextLink } from '@/src/navigation';
 import { device } from './globalStyle';
@@ -104,7 +104,7 @@ export const HeadingWrapper = styled.div`
 	}
 `;
 
-export const Link = styled(NextLink)`
+const LinkStyle = css`
 	position: relative;
 	display: inline-block;
 	width: fit-content;
@@ -124,5 +124,18 @@ export const Link = styled(NextLink)`
 	}
 	@media ${device.laptop} {
 		font-size: 1.5rem;
+	}
+`;
+
+export const Link = styled(NextLink)`
+	${LinkStyle}
+`;
+
+export const LocaleLink = styled.p`
+	${LinkStyle}
+
+	:hover {
+		margin-top: 0;
+		cursor: pointer;
 	}
 `;
