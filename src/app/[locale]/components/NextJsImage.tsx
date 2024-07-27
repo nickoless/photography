@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const NextJsImage = ({
 	photo,
-	imageProps: { alt, title, sizes, className, onClick },
+	imageProps: { alt, title, className, onClick },
 	wrapperStyle,
 }: RenderPhotoProps) => {
 	return (

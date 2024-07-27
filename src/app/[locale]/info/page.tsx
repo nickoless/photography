@@ -22,8 +22,13 @@ export default function Home() {
 				<ParagraphWrapper>
 					<SubHeading>{t('subheading')}</SubHeading>
 					<Paragraph>{t('paragraph')}</Paragraph>
-					<Paragraph>{t('paragraph2')}</Paragraph>
-					{/* <Paragraph>{t.markup('paragraph3')}</Paragraph> */}
+					<Paragraph>
+						{t.rich('paragraph2', {
+							email: (chunks) => (
+								<a href='mailto: nickoless.lee@gmail.com'>{chunks}</a>
+							),
+						})}
+					</Paragraph>
 				</ParagraphWrapper>
 				<ParagraphWrapper>
 					<SubHeading>Kit</SubHeading>
