@@ -6,14 +6,14 @@ import ChangeLocale from './ChangeLocale';
 
 const Navbar = () => {
 	const t = useTranslations('Navbar');
-	const locale = JSON.stringify(useLocale());
+	const locale = useLocale();
 
 	return (
 		<NavbarEl>
 			<Link href='/'>{t('home')}</Link>
 			<Link href='/info'>{t('info')}</Link>
-			<LocaleLink>|</LocaleLink>
-			<ChangeLocale locale={'en'} />
+			<LocaleLink $noPointer={true}>|</LocaleLink>
+			<ChangeLocale locale={locale} />
 		</NavbarEl>
 	);
 };

@@ -131,11 +131,11 @@ export const Link = styled(NextLink)`
 	${LinkStyle}
 `;
 
-export const LocaleLink = styled.p`
+export const LocaleLink = styled.p<{ $noPointer?: boolean }>`
 	${LinkStyle}
 
 	:hover {
 		margin-top: 0;
-		cursor: pointer;
+		cursor: ${({ $noPointer }) => ($noPointer ? 'none' : 'pointer')};
 	}
 `;

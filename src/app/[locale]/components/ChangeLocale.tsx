@@ -6,17 +6,16 @@ import { locales } from '@/src/config';
 import { usePathname, useRouter } from '@/src/navigation';
 import { LocaleLink } from '@/styles/common';
 
-const ChangeLocale = () => {
-	const locale = 'fr';
+interface Props {
+	locale: string;
+}
+
+const ChangeLocale = ({ locale }: Props) => {
 	const router = useRouter();
-	// const [isPending, startTransition] = useTransition();
 	const pathname = usePathname();
 	const params = useParams();
 
 	const newLocale = locales.filter((v) => v !== locale)[0];
-
-	console.log('newLocale', newLocale);
-	console.log(typeof locale);
 
 	const handleOnClick = () => {
 		router.replace(
@@ -28,7 +27,7 @@ const ChangeLocale = () => {
 		);
 	};
 
-	return <LocaleLink onClick={() => handleOnClick}>{locale}</LocaleLink>;
+	return <LocaleLink onClick={handleOnClick}>{newLocale}</LocaleLink>;
 };
 
 export default ChangeLocale;
